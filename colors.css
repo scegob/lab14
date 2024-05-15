@@ -1,0 +1,42 @@
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+/* Oregon State */
+#beavs {
+    background-color: #252525;
+    color: #cc4500;
+}
+
+/* University of Oregon */
+#ducks {
+    background-color: #154733;
+    color: yellow;
+}
+
+/* University of Washington */
+#huskies {
+    background-color: #4b2e83;
+    color: #b7a57a;
+}
+
+/* California */
+#oskis {
+    background-color: #081f3f;
+    color: #fcb326;
+}
+
+/* Stanford */
+#trees {
+    background-color: #990000;
+    color: lightgray;
+}
+
+/* Washington State */
+#cougs {
+    background-color: #981e32;
+    color: #5e6a71;
+}
