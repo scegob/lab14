@@ -56,21 +56,22 @@ const schoolsData = {
 };
 
 document.getElementById("loadDataBtn").addEventListener("click", function () {
-    const tableBody = document.querySelector("#stockTable tbody");
-    tableBody.innerHTML = "";
-  
-    schoolsData.forEach(function (stock) {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-      <td>${stock.companyName}</td>
-      <td>${stock.marketCap}</td>
-      <td>${stock.sales}</td>
-      <td>${stock.profit}</td>
-      <td>${stock.employees}</td>
-      `;
-      tableBody.appendChild(row);
-    });
+  const tableBody = document.querySelector("#pac12-table tbody");
+  tableBody.innerHTML = "";
+
+  Object.values(schoolsData).forEach(function (team) {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td><img src="${team.logoUrl}" alt="${team.name} logo"></td>
+      <td>${team.name}</td>
+      <td>${team.conferenceRecord.wins}-${team.conferenceRecord.losses}</td>
+      <td>${team.overallRecord.wins}-${team.overallRecord.losses}</td>
+      <td>${team.lastGame.result} ${team.lastGame.score} vs ${team.lastGame.opponent}</td>
+    `;
+    tableBody.appendChild(row);
   });
+});
+
 
 // Example usage
 console.log(schools.OREGON);
